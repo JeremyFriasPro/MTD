@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;800&display=swap');
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --dark: #161424;
+    --medium-purple: hsl(249, 100%, 75%);
+    --maximum-blue-purple: hsl(240, 100%, 86%);
+    --ghost-white: hsl(248, 100%, 98%);
+    --antique-white: hsl(30, 100%, 93%);
+    --apricot: hsl(24, 100%, 87%);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 1rem 0rem;
+}
+
+h1 {
+    font-size: clamp(5rem, 10vw, 7rem);
+    line-height: 4.25rem;
+}
+
+h3 {
+    font-size: clamp(2rem, 7vw, 3rem);
+}
+
+a {
+    color: var(--white);
+}
+
+p {
+    font-size: clamp(1.3rem, 3.3vw, 1.8rem);
+    line-height: 2.3rem;
+}
+
+/* Higher Specificity */
+
+#first-element {
+    width: 100vw;
+    height: 100vh;
+    color: var(--dark);
+    background: var(--medium-purple);
+}
+
+#navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+}
+
+#menu img {
+    width: 2.35rem;
+}
+
+
+@media only screen and (max-width: 700px) {
+    #links {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    #menu {
+        display: none;
+    }
+}
+
+#links ul {
+    display: flex;
+}
+
+#links li {
+    margin-right: clamp(1rem, 3vw, 3rem);
+}
+
+#links a {
+    font-size: clamp(1.25rem, 2.3vw, 1.40rem);
+}
+
+#hero {
+    padding: 1.5rem;
+}
